@@ -1,0 +1,25 @@
+<h2>componente CREATE</h2>
+
+
+<form [formGroup]="crudForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+        <label class="form-label">Titulo</label>
+        <br>
+        <input type="text" class="form-control" placeholder="Ingresa un titulo" formControlName="title" required>
+
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Contenido</label>
+        <br>
+        <input type="text" class="form-control" placeholder="Ingresa un contenido" formControlName="content" required>
+
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Autor</label>
+        <br>
+        <input type="text" class="form-control" placeholder="Ingresa un autor" formControlName="author" required>
+    </div>
+    <button [disabled]="!crudForm.valid" type="submit" class="btn btn-primary">Crear</button>
+</form>
